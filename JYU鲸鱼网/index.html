@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JYU鲸鱼网</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--validator.css-->
+    <link rel="stylesheet"  href="css/bootstrapValidator.min.css">
+    <!-- Pace加载进度条 -->
+    <link href="css/pace.css" rel="stylesheet">
+    <!--公共样式--->
+     <link rel="stylesheet" href="css/com.css">
+    <!--首页样式-->
+    <link rel="stylesheet" href="css/index.css">
+    <!--fullpage样式-->
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <!--jquery-->
+    <script src="js/jquery-1.12.3.min.js"></script>
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="50">
+<!-- Fixed navbar -->
+<nav class="navbar navbar-default navbar-fixed-top green-bg navbar1">
+    <div class="container-fluid">
+        <div class="navbar-header" style="width: 30%">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">打开导航栏</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand logo" href="./">
+                <img src=""></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse pull-left">
+            <ul class="nav navbar-nav nav1">
+                <li class="active" data-menuanchor="section1">
+                    <a href="#section1">首页</a>
+                </li>
+                <li data-menuanchor="section2">
+                    <a href="#section2">校园新鲜事</a>
+                </li>
+                <li data-menuanchor="section3">
+                    <a href="#section3">心情树洞</a>
+                </li>
+                <li data-menuanchor="section4">
+                    <a href="#section4">联谊配对</a>
+                </li>
+                <li data-menuanchor="section5">
+                    <a href="#section5">相片墙</a>
+                </li>
+                <li data-menuanchor="section6">
+                    <a href="#section6" data-toggle="modal" data-target="#myModal">关于我们</a>
+                </li>
+                <li>
+                    <div class="log-out">
+                        <a class="login-in" data-toggle="modal" data-target="#login">登录</a>
+                        <span style="padding:10px 0;color: black;">|</span>
+                        <a class="login-out" data-toggle="modal" data-target="#sign">注册</a>
+                    </div>
+                    <!--个人中心-->
+                    <div class="nav-per">
+                        <div class="per-face" id="per-face">
+                            <img src="img/self-face.jpg">
+                        <div class="per-list" style="display: none;">
+                            <div class="down-angle"></div>
+                            <!-- 倒三角 -->
+                            <div class="per-list-header">
+                                <div class="per-list-face">
+                                    <a class="per-face" href="perCenter.html">
+                                        <img src="img/self-face.jpg"></a>
+                                </div>
+                                <div class="per-list-name">
+                                    <a class="per-name">英子39</a>
+                                </div>
+                            </div>
+                            <div class="per-list-main">
+                                <ul>
+                                    <li>
+                                        <a href="">
+                                            <span class="glyphicon glyphicon-envelope"></span>
+                                            私信
+                                        </a>
+                                        <a class="badge" href="#">4</a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <span class="glyphicon glyphicon-pencil"></span>
+                                            回复
+                                        </a>
+                                        <a class="badge" href="#">4</a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <span class="glyphicon glyphicon-heart"></span>
+                                            联谊配对
+                                        </a>
+                                        <a class="badge" href="#">4</a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <span class="glyphicon glyphicon-user"></span>
+                                            活动报名
+                                        </a>
+                                        <a class="badge" href="#">4</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="per-list-foo">
+                                <a href="#">退出</a>
+                            </div>
+
+                        </div>
+                        </div>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</nav>
+<!--登陆框-->
+<div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">注 册</h4>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form class="form-horizontal" id="sing-form" method="post">
+                                <div class="form-group">
+                                    <label for="user"  class="col-md-4 control-label">用户名</label>
+                                    <div class="col-md-7">
+                                        <input type="text"  name ="user" class="form-control" id="user" required="required" placeholder="请输入用户名" autofocus autocomplete="on">
+                                        <small class="help-block" style="color: #a94442;display: none;">用户名已存在</small>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="Password1" class="col-md-4 control-label">密码</label>
+                                    <div class="col-md-7">
+                                        <input type="password" name="password" class="form-control" id="Password1" required="required" placeholder="请输入密码">
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="confirmPassword" class="col-md-4 control-label">确认密码</label>
+                                    <div class="col-md-7">
+                                        <input type="password" name="confirmPassword" class="form-control" id="confirmPassword" required="required" placeholder="请再次输入密码"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" class="col-md-4 control-label">邮箱</label>
+                                    <div class="col-md-7">
+                                        <input type="email" name="email" class="form-control" id="email" required="required" placeholder="请输入邮箱" autocomplete="on">
+                                        <small class="help-block" style="color: #a94442;display: none;">该邮箱已注册</small>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tel" class="col-md-4 control-label">电话号码</label>
+                                    <div class="col-md-7">
+                                        <input type="tel" name="tel" class="form-control" id="tel" placeholder="请输入电话号码" autocomplete="on">
+                                        <small class="help-block" style="color: #a94442;display: none;">该电话号码已注册</small>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="sex" class="col-md-4 control-label">性别</label>
+                                    <div class="col-md-7 radio" style="padding-top: 0" id="sex">
+                                        <label class="radio-inline" for="boy" style="color:rgba(82, 52, 30, 1)">
+                                            <input type="radio" checked="checked" id="boy" value="boy" name="sex">男</label>
+                                        <label class="radio-inline" for="girl" style="color:rgba(82, 52, 30, 1)">
+                                            <input type="radio" id="girl" value="girl" name="sex">女</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="code" class="col-md-4 control-label">验证码</label>
+                                    <div class="col-md-7" style="display:inline-block" id="code-num">
+                                        <img src=" " alt="验证码" style="" id="code"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 col-ms-2 control-label col-xs-offset-2 col-ms-offset-2 col-md-offset-3"></label>
+                                    <button id="btn-sub" type="submit" disabled="false" class="btn btn-primary btn-lg btn-bg">
+                                        <span class="glyphicon glyphicon-user"></span>
+                                        注册
+                                    </button>
+                                </div>
+                            </form>
+                            <div class="login_succ" ><span class="glyphicon glyphicon-ok-sign"> </span> 恭喜你，注册成功</div>
+                            <div class="login_wait" ><span class="glyphicon glyphicon-hourglass"> </span> 正在提交注册，请稍后</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--注册框-->
+<div class="modal fade" id="sign" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">登录</h4>
+            </div>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <form class="form-horizontal" id="log-form">
+                                <div class="form-group">
+                                    <label for="login_user" class="col-md-4 control-label">用户名:</label>
+                                    <div class="col-md-7">
+                                        <input type="text" class="form-control" id="login_user" name="login_user" placeholder="请输入用户名">
+                                        <small class="help-block" style="color: #a9442;display: none;">用户名不存在</small>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="login_password" class="col-md-4 control-label">密码:</label>
+                                    <div class="col-md-7">
+                                        <input type="password" class="form-control" id="login_password" name="login_password" placeholder="请输入密码">
+                                        <small class="help-block" style="color: #a94442;display: none;">密码错误，请重新输入</small>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="code" class="col-md-4 control-label">验证码:</label>
+                                    <div class="col-md-7" style="display:inline-block">
+                                        <img src=" " alt="验证码" style="" id="code"></div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 col-ms-2 control-label col-xs-offset-2 col-ms-offset-2 col-md-offset-3"></label>
+                                    <button id="btn-log" type="submit" class="btn btn-primary btn-lg btn-bg">登陆</button>
+                                </div>
+
+                            </form>
+                            <div class="sign-error"><span class="glyphicon glyphicon-remove-sign"> </span> 登录超时，请重新登录</div>
+                            <div class="sign_wait" ><span class="glyphicon glyphicon-hourglass"> </span> 正在登录，请稍后</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="main">
+<!--首页屏-->
+<section class="section section1" >
+    <div class="container">
+        <img src="img/students.png" class="index-img" data-wow-delay=".5s"/>
+        <h1>鲸鱼JYU网</h1>
+        <p>专为嘉大学生定制网(￣▽￣)</p>
+    </div>
+</section>
+    <!--校园新鲜事屏-->
+<section  class="section section2">
+    <div class="container">
+        <div class="col col-md-5 col-left detail">
+            <div class="section-box">
+                <h1>
+                    <a href="校园热事.html">聚焦校园热事</a>
+                </h1>
+                    <p>神马？今晚查房？卧槽，西校门又抓车了！</p>
+            </div>
+
+        </div>
+        <div class="col col-md-7 col-right">
+            <img src="img/hot.png"/>
+        </div>
+    </div>
+</section>
+    <!--心情树洞屏-->
+<section  class="section section3">
+    <div class="container">
+        <div class="col-md-7 col-md-push-5 center-block">
+            <div class="section-box">
+                <h1>
+                    <a href="树洞.html">心情树洞</a>
+                </h1>
+                <div class="desc">
+                    <p>好的坏的通通发泄在这吧~~~</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-md-pull-7">
+            <img src="img/duola.jpg" class="img-responsive" />
+        </div>
+    </div>
+</section>
+    <!--联谊配对-->
+<section class="section section4">
+    <div class="container">
+        <div class="col col-md-5 col-left detail" style="padding-top: 10%">
+            <div class="section-box">
+                <h1>联谊匹配</h1>
+                <p>妈妈再也不怕我找不到女朋友啦~~~</p>
+            </div>
+        </div>
+        <div class="scol-md-7">
+            <img src="img/boyandgirl.png" class="img-responsive center" />
+        </div>
+    </div>
+</section>
+    <!--照片墙-->
+<section class="section section5" style="padding-top: 0">
+    <div class="container">
+        <div class="col-md-6 col-md-push-5 center-block" style="padding-top: 10%">
+            <div class="section-box">
+                <h1>照片墙</h1>
+                <p>记录你的喜怒喜乐~~~</p>
+            </div>
+        </div>
+        <div class="col-md-6 col-md-pull-7">
+            <img src="img/sc3.png" class="img-responsive center" />
+        </div>
+    </div>
+
+</section>
+    <!--关于我们-->
+<section  class="section section6">
+    <div class="container">
+        <h1>Go Online</h1>
+        <div>
+            <p>
+                We are a small web design and consulting studio in Malaysia aimed to bring your
+                <br/>
+                business presence online and reach millions of people worldwide
+            </p>
+            <p class="tagline">
+                We empower your business online.
+                <br>
+                If you think it's expensive to hire a professional. Wait till you hire an amateur.
+            </p>
+        </div>
+    </div>
+</section>
+
+</div>
+
+<footer class="region yellow-bg align-center">
+    <div class="container wow zoomIn">
+        <h1>Need us to setup an online presence for your business?</h1>
+        <a class="btn" href="#" data-toggle="modal" data-target="#myModal">Get Started</a>
+    </div>
+</footer>
+
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+ Placed at the end of the document so the pages load faster
+
+<script src="js/bootstrap.min.js"></script>
+<!--公用-->
+<script src="js/com.js"></script>
+<!--登录注册验证-->
+<script src="js/bootstrapValidator.min.js"></script>
+<!--进度条加载-->
+<script src="js/pace.min.js"></script>
+<!--全屏滚动-->
+<script src="js/jquery.fullPage.min.js"></script>
+<!--首页-->
+<script src="js/index.js"></script>
+
+<!-- Contact Us form modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">反馈信息</h4>
+            </div>
+            <div class="modal-body">
+
+                <h3>
+                    Designed Studio
+                    <span style="font-size:12px;">(002505696-T)</span>
+                </h3>
+                <p>
+                    Email:
+                    <a href="mailto:contact@designedstudio.com">contact@designedstudio.com</a>
+                </p>
+                <br>
+
+                <form id="contactForm" action=" " method="POST" data-toggle="validator">
+                    <div class="form-group">
+                        <label for="fullname"  class="col-md-4 control-label">用户名</label>
+                        <input type="text"  name ="fullname" class="form-control" id="fullname" required="required" placeholder="请输入用户名"></div>
+
+                    <div class="form-group">
+                        <label for="fullemail" class="col-md-4 control-label">邮箱</label>
+                        <input type="email" name="fullemail" class="form-control" id="fullemail" required="required" placeholder="请输入邮箱"></div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" class="form-control" name="subject" id="subject" required>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="8" name="message" id="message" required></textarea>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group hpot">
+                        <label for="subject">Honeypot</label>
+                        <input type="text" class="form-control" name="honeypot" id="honeypot">
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="hidden" value="submit" name="action">
+                        <button type="submit" class="btn btn-primary">提交</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Successful submission modal -->
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">Thank You !</h4>
+            </div>
+            <div class="modal-body">Thank you for your enquiry, we will reply you soon !</div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-close" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

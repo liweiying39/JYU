@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>个人中心</title>
+    <meta name="viewport" content="width=device-width">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!--validator.css-->
+    <!--<link rel="stylesheet"  href="css/bootstrapValidator.min.css">-->
+    <!-- Pace加载进度条 -->
+    <link href="css/pace.css" rel="stylesheet">
+    <!--&lt;!&ndash;图片察看器&ndash;&gt;-->
+    <!--<link rel="stylesheet" href="css/viewer.min.css">-->
+    <!--公共样式--->
+    <link rel="stylesheet" href="css/com.css">
+    <!--校园热事样式-->
+    <link rel="stylesheet" href="css/person.css">
+    <!--jquery-->
+    <script src="js/jquery-1.12.3.min.js"></script>
+</head>
+<body>
+<div id="hot-warp">
+    <!-- 固定导航条 -->
+    <nav class="navbar navbar-default navbar-fixed-top green-bg navbar1">
+        <div class="container-fluid">
+            <div class="navbar-header" style="width: 30%">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">打开导航栏</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand logo" href="./">
+                    <img src=""></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse pull-left">
+                <ul class="nav navbar-nav nav1">
+                    <li data-menuanchor="section1">
+                        <a href="#section1">首页</a>
+                    </li>
+                    <li class="active" data-menuanchor="section2">
+                        <a href="#section2">校园新鲜事</a>
+                    </li>
+                    <li data-menuanchor="section3">
+                        <a href="#section3">心情树洞</a>
+                    </li>
+                    <li data-menuanchor="section4">
+                        <a href="#section4">联谊配对</a>
+                    </li>
+                    <li data-menuanchor="section5">
+                        <a href="#section5">相片墙</a>
+                    </li>
+                    <li data-menuanchor="section6">
+                        <a href="#section6" data-toggle="modal" data-target="#myModal">关于我们</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <span class="frame-line hot-animated top-frame"></span>
+    <span class="frame-line hot-animated right-frame"></span>
+    <span class="frame-line hot-animated bottom-frame"></span>
+    <span class="frame-line hot-animated left-frame"></span>
+
+    <div class="container"  style="margin-bottom: 150px;">
+        <!--头像区-->
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class=" head">
+                    <div class="head-warp">
+
+                        <div class="head-face">
+                            <img src="img/self-face.jpg"  data-toggle="modal" data-target="#faceModal"></div>
+                        <p class="head-name">
+                            蒲公英999
+                            <span class="icon_bed">女</span>
+                        </p>
+                        <div class="head-signature ">啦啦啦啦啦啦啦啦啦啦啦啦啦啦</div>
+                        <div class="head-other">
+                            <div class="atten">关注</div>
+                            <div class="head-meg" data-toggle="modal" data-target="#privModal">私信</div>
+                        </div>
+
+                        <div class="head-nav">
+                            <div class="hea-nav_bar">
+                                <ul class=" nav-list">
+                                    <li>
+                                        <a class="tab_link tab_actived">我的私信</a>
+                                    </li>
+                                    <li>
+                                        <a class="tab_link">我的照片</a>
+                                    </li>
+                                    <li>
+                                        <a class="tab_link">我的评论</a>
+                                    </li>
+                                    <li>
+                                        <a class="tab_link">我的树洞</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!--我的私信主体内容-->
+        <div class="row mess-main" id="mess-main" style="display: block;">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="col-md-3  col-ms-3  mess-side">
+                    <div id="edit">
+                        <h4>编辑我的资料</h4>
+                        <p class="edit-face">
+                            <a href="#">
+                                <img src="img/self-face.jpg"></a>
+                        </p>
+                        <div id="edit-text">
+                            <ul>
+                                <li>
+                                    <a href="#" class="btn btn-default btn-lg">
+                                        <span class="pet-name">昵称:</span>
+                                        <span class="edit-name">蒲公英999</span>
+                                        <span class="glyphicon glyphicon-pencil edit-pan"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a  class="btn btn-default btn-lg">
+                                        <span class="pet-name">性别:</span>
+                                        <span class="edit-name">女</span>
+                                        <span class="glyphicon glyphicon-pencil edit-pan"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="btn btn-default btn-lg">
+                                        <span class="pet-name">学院:</span>
+                                        <span class="edit-name">计算机</span>
+                                        <span class="glyphicon glyphicon-pencil edit-pan"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="btn btn-default btn-lg">
+                                        <span class="pet-name">生日:</span>
+                                        <span class="edit-name">1994-10-11</span>
+                                        <span class="glyphicon glyphicon-pencil edit-pan"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9  col-ms-9  mess-content" id="mess-wall" >
+                    <div  style="display: none;" class="mess-warp">
+                        <!--一个私信区域-->
+                        <div class="mess_one" >
+                            <div class="mess-feed" >
+                                <!--头像区域-->
+                                <div class="mess-face">
+                                    <img src="img/self-face.jpg"></div>
+                                <!--细节区域-->
+                                <div class="mess-detail">
+                                    <div class="mess-info">
+                                        <a>啦啦啦</a>
+                                    </div>
+                                    <div class="mess-time">
+                                        <time class="time">4月5日 14:08</time>
+                                    </div>
+                                    <div class="mess-text">你所知道的真相，并不是真相</div>
+                                    <!--   回复面板 --> </div>
+                                <!--其它操作区域-->
+                                <div class="mess-hand">
+                                    <div class="dropdown hand-drop">
+                                        <a class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                            <span class="glyphicon glyphicon-menu-down"></span>
+                                        </a>
+                                        <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
+                                            <li>
+                                                <a  class="mess-one-del">删除</a>
+                                            </li>
+                                            <li>
+                                                <a class="mess-one-top">置顶</a>
+                                            </li>
+                                            <li>
+                                                <a >转换为好友可见</a>
+                                            </li>
+                                            <li>
+                                                <a >转换为仅自己可见</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div style="clear: both;height: 1px"></div>
+                            </div>
+                            <div class="self-img"  style="height: 100%">
+                                <ul class="jq22">
+                                    <li>
+                                        <img  bigsrc ="img/tibet-1.jpg" src="img/thumbnails/tibet-1.jpg" alt="图片1"
+                                              data-toggle="modal" data-target="#photoModal"></li>
+                                    <li>
+                                        <img data-original="img/tibet-2.jpg" bigsrc="img/tibet-2.jpg" src="img/thumbnails/tibet-2.jpg" alt="图片2" data-toggle="modal" data-target="#photoModal"></li>
+                                    <li>
+                                        <img data-original="img/tibet-3.jpg" bigsrc="img/tibet-3.jpg" src="img/thumbnails/tibet-3.jpg" alt="图片3" data-toggle="modal" data-target="#photoModal"></li>
+                                    <li>
+                                        <img data-original="img/tibet-4.jpg" bigsrc="img/tibet-4.jpg" src="img/thumbnails/tibet-4.jpg" alt="图片4" data-toggle="modal" data-target="#photoModal"></li>
+                                    <li>
+                                        <img data-original="img/tibet-5.jpg" bigsrc="img/tibet-5.jpg" src="img/thumbnails/tibet-5.jpg" alt="图片5" data-toggle="modal" data-target="#photoModal"></li>
+                                    <li>
+                                        <img data-original="img/tibet-6.jpg" bigsrc="img/tibet-6.jpg" src="img/thumbnails/tibet-6.jpg" alt="图片6"d></li>
+                                </ul>
+                            </div>
+                            <div class="self-foo" >
+                                <div class="res">
+                                    <a class="self-res" title="回复"data-toggle="tooltip" data-placement="top">
+                                        <span class="glyphicon glyphicon-pencil"></span>
+                                        33
+                                    </a>
+                                    <div class="down-angle" style="color: #fff;"></div>
+                                </div>
+                                <div class="letter">
+                                    <a class="self-mess" title="私信"data-toggle="tooltip" data-placement="top">
+                                        <span class="glyphicon glyphicon-envelope"></span>
+                                        33
+                                    </a>
+                                    <div class="down-angle"></div>
+                                </div>
+                                <div class="share">
+                                    <a class="self-share" title="分享"data-toggle="tooltip" data-placement="top">
+                                        <span class="glyphicon glyphicon-share"></span>
+                                        33
+                                    </a>
+                                </div>
+                                <div class="supp">
+                                    <a class="self-sup" title="点赞"data-toggle="tooltip" data-placement="top">
+                                        <span class="glyphicon glyphicon-thumbs-up"></span>
+                                        <span class="sup-num">33</span>
+                                    </a>
+                                </div>
+                                <div style="clear: both;height: 1px"></div>
+                                <div class="down-warp">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">
+                                            <form class="input-form concat-form">
+                                                <h4>我来说两句</h4>
+                                                <textarea  class="input-text my-text " contenteditable="true"></textarea>
+                                                <p class="content-warm">
+                                                    还可以输入
+                                                    <span class="col-num">200</span>
+                                                    字
+                                                </p>
+                                                <div class="mtm-post">
+                                                    <div class="uibtn"> <i class="uiface">表情</i>
+                                                    </div>
+                                                    <button class="btn btn-primary pull-right text-sub my-sub" type="submit">评论</button>
+                                                    <a  class="cle" >清尾</a>
+                                                    <div style="clear:both;height: 1px"></div>
+                                                </div>
+                                            </form>
+                                            <div class="panel-list">
+                                                <h4>看看他们说了什么</h4>
+                                                <div class="other-point">
+                                                    <div class="point-one">
+                                                        <div class="point-face">
+                                                            <img src="img/self-face.jpg"></div>
+                                                        <div class="point-main">ligfqeioriyjviutyrjhui</div>
+                                                        <div style="clear: both;height: 1px"></div>
+                                                        <div class="point-foo">
+                                                            <time class="point-time">6月9日</time>
+                                                            <div class="point-other">
+                                                                <ul  class="po-re">
+                                                                    <li>
+                                                                        <a class="po-res">回复</a>
+                                                                    </li>
+                                                                    <li class="pos-del">
+                                                                        <a class="po-del">删除</a>
+                                                                        <div class="del-sure">
+                                                                            <div class="del-sure-cont">
+                                                                                <p class="del-sure_txt">
+                                                                                    <span class="glyphicon glyphicon-question-sign ans-coin"></span>
+                                                                                    <span class="del-warm">确定要删除该回复吗</span>
+                                                                                </p>
+                                                                                <div class="btn-group del-btn" role="group">
+                                                                                    <button type="button" class="btn btn-default btn-ok">确定</button>
+                                                                                    <button type="button" class="btn btn-default btn-no">取消</button>
+                                                                                    <div class="glyphicon glyphicon-triangle-bottom del-angle"></div>
+
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </li>
+                                                                    <li >
+                                                                        <a class="po-su">
+                                                                            <span class="glyphicon glyphicon-thumbs-up"></span>
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+
+                                                            <div style="clear: both;height: 1px"></div>
+
+                                                        </div>
+                                                        <!--回复评论-->
+                                                        <form class="respon-point" style="display: none;">
+                                                            <textarea  class="input-text he-text" contenteditable="true"></textarea>
+                                                            <div class="mtm-post">
+                                                                <div class="uibtn"> <i class="uiface uiface">表情</i>
+                                                                </div>
+                                                                <button class="btn btn-primary pull-right text-sub he-sub" type="submit">评论</button>
+                                                                <a  class="cle" >清尾</a>
+                                                                <div style="clear:both;height: 1px"></div>
+                                                            </div>
+                                                        </form>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="down-letter" style="display:none;">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body">
+                                            <form class="input-form concat-form">
+                                                <h4>我来说两句</h4>
+                                                <textarea  class="input-text my-text" contenteditable="true"></textarea>
+                                                <p class="content-warm">
+                                                    还可以输入
+                                                    <span class="col-num">200</span>
+                                                    字
+                                                </p>
+
+                                                <div class="mtm-post">
+                                                    <div class="uibtn">
+                                                        <i class="uiface uiface">表情</i>
+                                                    </div>
+                                                    <button class="btn btn-primary pull-right text-sub my-msg-sub" type="submit">评论</button>
+                                                    <a  class="cle" >清尾</a>
+                                                    <div style="clear:both;height: 1px"></div>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dis-more">
+                            <a class="btn">加载更多</a>
+                        </div>
+                    </div>
+
+                    <div class="edit-warp">
+                        <div class="base-msg">
+                            <form class="info_title">
+                                <fieldset class="S_line2">
+                                    <legend class="tit S_txt1">基本信息</legend>
+                                    <div class="btns">
+                                        <a class="W_btn_round" action-data="edit=0" node-type="edit" action-type="edit" href="javascript:void(0)">
+                                            <span id="base-btn">编辑</span>
+                                        </a>
+                                    </div>
+                                </fieldset>
+                            </form>
+                            <div class="base_inview" style="display: block;">
+                                <div class="pf_item clearfix">
+                                    <div class="label S_txt2">登录名</div>
+                                    <div class="con">
+                                        188*****522
+                                        <a target="_blank" href="http://account.weibo.com/set/password">修改密码</a>
+                                    </div>
+                                </div>
+                                <div class="pf_item clearfix">
+                                    <div class="label S_txt2">昵  称</div>
+                                    <div class="con" node-type="nickname_view">蒲公英7450</div>
+                                </div>
+                                <div class="pf_item clearfix">
+                                    <div class="label S_txt2">真实姓名</div>
+                                    <div class="con" node-type="realname_view">
+                                        <a action-data="type=realname" action-type="quickedit" href="javascript:void(0)">
+                                            <i class="glyphicon glyphicon-pencil"></i>
+                                            马上填写
+                                        </a>
+                                        自己的真实姓名
+                                    </div>
+                                </div>
+                                <div class="pf_item clearfix">
+                                    <div class="label S_txt2">所在地</div>
+                                    <div class="con" node-type="city_view">广东 梅州</div>
+                                </div>
+                                <div class="pf_item clearfix">
+                                    <div class="label S_txt2">性  别</div>
+                                    <div class="con" node-type="sex_view">女</div>
+                                </div>
+                                <div class="pf_item clearfix">
+                                    <div class="label S_txt2">性取向</div>
+                                    <div class="con" node-type="sextrend_view">
+                                        <a action-data="type=sextrend" action-type="quickedit" href="javascript:void(0)">
+                                            <i class="glyphicon glyphicon-pencil"></i>
+                                            马上填写
+                                        </a>
+                                        自己的性取向,让更多的人了解你
+                                    </div>
+                                </div>
+                                <div class="pf_item clearfix">
+                                    <div class="label S_txt2">感情状况</div>
+                                    <div class="con" node-type="love_view">
+                                        <a action-data="type=love" action-type="quickedit" href="javascript:void(0)">
+                                            <i class="glyphicon glyphicon-pencil"></i>
+                                            马上填写
+                                        </a>
+                                        自己的感情状况,让更多的人了解你
+                                    </div>
+                                </div>
+                                <div class="pf_item clearfix">
+                                    <div class="label S_txt2">生日</div>
+                                    <div class="con" node-type="birth_view">1970-01-01</div>
+                                </div>
+                                <div class="pf_item clearfix">
+                                    <div class="label S_txt2">血型</div>
+                                    <div class="con" node-type="blood_view">
+                                        <a action-data="type=blood" action-type="quickedit" href="javascript:void(0)">
+                                            <i class="glyphicon glyphicon-pencil"></i>
+                                            马上填写
+                                        </a>
+                                        自己的血型,可以被更多同血型的人找到哦
+                                    </div>
+                                </div>
+                                <div class="pf_item clearfix">
+                                    <div class="label S_txt2">博客地址</div>
+                                    <div class="con" node-type="blog_view">
+                                        <a action-data="type=blog" action-type="quickedit" href="javascript:void(0)">
+                                            <i class="glyphicon glyphicon-pencil"></i>
+                                            马上填写
+                                        </a>
+                                        自己的博客地址,让自己的心声被更多的人了解
+                                    </div>
+                                </div>
+                                <div class="pf_item clearfix">
+                                    <div class="label S_txt2">简介</div>
+                                    <div class="con" node-type="desc_view">我不完美，但很真实</div>
+                                </div>
+                                <div class="pf_item clearfix">
+                                    <div class="label S_txt2">注册时间</div>
+                                    <div class="con" node-type="desc_view">2013-09-18</div>
+                                </div>
+                            </div>
+
+                            <div class="base_edit" style="display: none;">
+                                <div class="pf_item clearfix">
+                                    <div class="label S_txt2" id="edit-name">登录名</div>
+                                    <div class="con">
+                                        188*****522
+                                        <a target="_blank">修改密码</a>
+                                    </div>
+                                </div>
+                                <div class="pf_item clearfix">
+                                    <div class="label S_txt2" id="edit-sickname">
+                                        <span class="W_error">*</span>
+                                        昵  称
+                                    </div>
+                                    <input type="hidden" name="setting_rid" value="5CRiiy2WxgCFCXJtOxr20AUC7G4=">
+                                    <input type="hidden" node-type="oldnick" name="oldnick" placeholder="蒲公英7450">
+                                    <div class="con">
+                                        <input class="W_input" placeholder="蒲公英7450" name="nickname"></div>
+                                    <div class="status" node-type="nickname_tip">
+                                        <div class="W_tips tips_del clearfix" style="display:none"></div>
+                                    </div>
+                                </div>
+                                <div class="pf_item clearfix">
+                                    <div class="dropdown" id="real-name">
+                                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                            仅自己可见
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                            <li>
+                                                <a href="#">所有人可见</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">我关注的人可见</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">关注我的人可见</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="label S_txt2" >真实姓名</div>
+                                    <div class="con">
+                                        <input class="W_input" name="realname" placeholder="请输入真实姓名"></div>
+                                </div>
+                                <div class="pf_item clearfix">
+
+                                    <div class="label S_txt2" node-type="realname_label">生日</div>
+                                    <div class="con">
+                                        <input class="W_input" type="text" value="" name="birthday" id="datepicker" placeholder="请输入生日"></div>
+                                </div>
+                                <div class="pf_item clearfix">
+                                    <div class="label S_txt2">
+                                        <span class="W_error">*</span>
+                                        所在地
+                                    </div>
+                                    <div class="con">
+                                        <div class="input_sel" >
+                                    <span>
+                                       地区：
+                                       <select id="area"></select>
+
+                                    </span>
+                                    <span>
+                                       省：
+                                       <select id="cmbProvince"></select>
+                                    </span>
+                                    <span>
+                                       市：
+                                       <select id="cmbCity"></select>
+                                    </span>
+                                    <span>
+                                       区：
+                                       <select id="cmbArea"></select>
+                                    </span>
+                                        </div>
+                                    </div>
+                                    <div class="pf_item clearfix">
+                                        <div class="label S_txt2">
+                                            <span class="W_error">*</span>
+                                            性  别
+                                        </div>
+                                        <div class="con">
+                                            <div class="input_check">
+                                       <span class="rsp">
+                                          <label for="man_radio">
+                                              <input id="man_radio" class="W_radio" type="radio" value="m" name="gender">男</label>
+                                       </span>
+                                       <span class="rsp">
+                                          <label for="woman_radio">
+                                              <input id="woman_radio" class="W_radio" type="radio" checked="checked" value="f" name="gender">女</label>
+                                       </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pf_item clearfix">
+                                        <div class="label S_txt2" node-type="sextrend_label">性取向</div>
+                                        <div class="dropdown" id="sex-dir">
+                                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                仅自己可见
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                                <li>
+                                                    <a href="#">所有人可见</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">我关注的人可见</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关注我的人可见</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="con">
+                                            <div class="input_check">
+                                       <span class="rsp">
+                                          <label for="man">
+                                              <input id="man" class="W_checkbox" type="checkbox" value="1" name="sextrend[]">男</label>
+                                       </span>
+                                       <span class="rsp">
+                                          <label for="woman">
+                                              <input id="woman" class="W_checkbox" type="checkbox" value="2" name="sextrend[]">女</label>
+                                       </span>
+                                                <span class="S_txt2">（这里可以双选哦）</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pf_item clearfix">
+                                        <div class="label S_txt2" node-type="love_label">感情状况</div>
+
+                                        <div class="con">
+                                            <div class="input_sel">
+                                                <select init_value="" node-type="love" name="love">
+                                                    <option value="" selected=""></option>
+                                                    <option value="1">单身</option>
+                                                    <option value="2">求交往</option>
+                                                    <option value="3">暗恋中</option>
+                                                    <option value="4">暧昧中</option>
+                                                    <option value="5">恋爱中</option>
+                                                    <option value="6">订婚</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pf_item clearfix">
+                                        <div class="label S_txt2" node-type="blood_label">血型</div>
+                                        <div class="dropdown" id="blood">
+                                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                仅自己可见
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                                <li>
+                                                    <a href="#">所有人可见</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">我关注的人可见</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关注我的人可见</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="con">
+                                            <div class="input_sel">
+                                                <select init_value="" name="blood">
+                                                    <option value="" selected=""></option>
+                                                    <option value="A">A型</option>
+                                                    <option value="B">B型</option>
+                                                    <option value="AB">AB型</option>
+                                                    <option value="O">O型</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pf_item clearfix">
+                                        <div class="label S_txt2" node-type="blog_label">博客地址</div>
+                                        <div class="dropdown" id="blog">
+                                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                仅自己可见
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                                <li>
+                                                    <a href="#">所有人可见</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">我关注的人可见</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关注我的人可见</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="con">
+                                            <input class="W_input" value="" action-data="text=请输入正确的博客地址&must=false" name="blog" action-type="text_copy" node-type="blog"></div>
+                                        <div class="status" node-type="blog_tip">
+                                            <div class="W_tips tips_del clearfix" style="display:none"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="pf_item clearfix">
+                                        <div class="label S_txt2" node-type="desc_label">简介</div>
+                                        <div class="con">
+                                            <textarea class="W_input" rows="10" cols="30" action-data="text=请输入个人简介&must=false" action-type="text_copy" node-type="desc" name="mydesc">我不完美，但很真实</textarea>
+                                        </div>
+                                        <div class="status" node-type="desc_tip">
+                                            <div class="W_tips tips_del clearfix" style="display: none;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="touch">
+                            <!-- 联系方式的头部 -->
+                            <div class="infoblock" node-type="com_out">
+                                <form class="info_title">
+                                    <fieldset class="S_line2">
+                                        <legend class="tit S_txt1">联系信息</legend>
+                                        <div class="btns">
+                                            <a class="W_btn_round" action-data="edit=0" node-type="edit" action-type="edit" href="javascript:void(0)">
+                                                <span id="touch-btn">编辑</span>
+                                            </a>
+                                        </div>
+                                    </fieldset>
+                                </form>
+
+                                <div node-type="com_view" class="touch-view" style="display: block;">
+                                    <div class="pf_item clearfix">
+                                        <div class="label S_txt2">邮箱</div>
+                                        <div class="con" node-type="email_view">
+                                            <a action-data="type=qq" action-type="quickedit" href="javascript:void(0)">
+                                                <i class="glyphicon glyphicon-pencil"></i>
+                                                马上填写
+                                            </a>
+                                            你的邮箱信息
+                                        </div>
+                                    </div>
+                                    <div class="pf_item clearfix">
+                                        <div class="label S_txt2">QQ</div>
+                                        <div class="con" node-type="qq_view">
+                                            <p>
+                                                <a action-data="type=qq" action-type="quickedit" href="javascript:void(0)">
+                                                    <i class="glyphicon glyphicon-pencil"></i>
+                                                    马上填写
+                                                </a>
+                                                你的QQ信息
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="pf_item clearfix">
+                                        <div class="label S_txt2">MSN</div>
+                                        <div class="con" node-type="msn_view">
+                                            <p>
+                                                <a action-data="type=msn" action-type="quickedit" href="javascript:void(0)">
+                                                    <i class="glyphicon glyphicon-pencil"></i>
+                                                    马上填写
+                                                </a>
+                                                你的msn信息
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="touch-edit" style="display: none;">
+                                    <div class="pf_item clearfix">
+                                        <div class="dropdown" id="email-edit">
+                                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                仅自己可见
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                                <li>
+                                                    <a href="#">所有人可见</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">我关注的人可见</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关注我的人可见</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="label S_txt2" node-type="email_label">邮箱</div>
+                                        <div class="con">
+                                            <input class="W_input" type="" value="" action-data="text=请输入邮箱地址&must=false" action-type="text_copy" node-type="email" name="email"></div>
+                                        <div class="status" node-type="email_tip">
+                                            <div class="W_tips tips_del clearfix" style="display:none"></div>
+                                        </div>
+                                    </div>
+                                    <div class="pf_item clearfix">
+                                        <div class="dropdown" id="email-edit">
+                                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                仅自己可见
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                                <li>
+                                                    <a href="#">所有人可见</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">我关注的人可见</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关注我的人可见</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="label S_txt2" node-type="qq_label">QQ</div>
+                                        <div class="con">
+                                            <input class="W_input" type="" value="" action-data="text=请输入QQ号&must=false" action-type="text_copy" node-type="qq" name="qq"></div>
+                                        <div class="status" node-type="qq_tip">
+                                            <div class="W_tips tips_del clearfix" style="display:none"></div>
+                                        </div>
+                                    </div>
+                                    <div class="pf_item clearfix">
+                                        <div class="dropdown" id="email-edit">
+                                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                仅自己可见
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                                <li>
+                                                    <a href="#">所有人可见</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">我关注的人可见</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">关注我的人可见</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="label S_txt2" node-type="msn_label">MSN</div>
+                                        <div class="con">
+                                            <input class="W_input" value="" action-data="text=请输入msn&must=false" action-type="text_copy" node-type="msn" name="msn"></div>
+                                        <div class="status" node-type="msn_tip">
+                                            <div class="W_tips tips_del clearfix" style="display:none"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--我的照片-->
+        <div class="row mess-main" id="photo-main" style="display: none;">
+            <div class="col-md-10 col-md-offset-1 mess-content" id="poto-wall" >
+                <ul class="polaroids clearfix" id="polaroids">
+                    <li >
+                        <a href="#" title="Roelan">
+                            <img  _src="img/image-01.jpg" src="img/image-01.jpg" alt="Roeland!"></a>
+                    </li>
+                    <li>
+                        <a href="#" title="Discus">
+                            <img _src="img/image-02.jpg" src="img/image-01.jpg" alt="Discussion"></a>
+                    </li>
+                    <li>
+                        <a href="#" title="A Hear">
+                            <img _src="img/image-01.jpg" src="img/image-01.jpg" alt="A Hearty Laugh"></a>
+                    </li>
+                    <li>
+                        <a href="#" title="Evil M">
+                            <img _src="img/image-02.jpg" src="img/image-01.jpg" alt="Evil Matt Coding"></a>
+                    </li>
+                    <li>
+                        <a href="#" title="Scribb">
+                            <img _src="img/image-01.jpg" src="img/image-01.jpg" alt="Scribbles"></a>
+                    </li>
+                    <li>
+                        <a href="#" title="Amanda">
+                            <img _src="img/image-02.jpg" src="img/image-01.jpg" alt="Amanda Glares..."></a>
+                    </li>
+                    <li>
+                        <a href="#" title="The Do">
+                            <img _src="img/image-01.jpg" src="img/image-01.jpg" alt="The Dougernaut"></a>
+                    </li>
+                    <li>
+                        <a href="#" title="I See ">
+                            <img _src="img/image-02.jpg" src="img/image-01.jpg" alt="I See You!"></a>
+                    </li>
+                    <li>
+                        <a href="#" title="Rock H">
+                            <img _src="img/image-01.jpg" src="img/image-01.jpg" alt="Rock Hard Balls"></a>
+                    </li>
+                    <li>
+                        <a href="#" title="Bocce ">
+                            <img _src="img/image-02.jpg" src="img/image-01.jpg" alt="Bocce Ball"></a>
+                    </li>
+                    <li>
+                        <a href="#" title="Boris ">
+                            <img src="img/image-01.jpg" alt="Boris "Tatooine""></a>
+                    </li>
+                    <li>
+                        <a href="#" title="Sneake">
+                            <img _src="img/image-02.jpg" src="img/image-01.jpg" alt="Sneakers & Stilettos"></a>
+                    </li>
+                    <li>
+                        <a href="#" title="Sneake">
+                            <img _src="img/5.jpg" src="img/image-01.jpg" alt="Sneakers & Stilettos"></a>
+                    </li>
+                    <li>
+                        <a href="#" title="Sneake">
+                            <img _src="img/3.jpg" src="img/image-01.jpg" alt="Sneakers & Stilettos"></a>
+                    </li>
+                    <li>
+                        <a href="#" title="Sneake">
+                            <img _src="img/4.jpg" src="img/image-01.jpg" alt="Sneakers & Stilettos"></a>
+                    </li>
+                    <li>
+                        <a href="#" title="Sneake">
+                            <img _src="img/2.jpg" src="img/image-01.jpg" alt="Sneakers & Stilettos"></a>
+                    </li>
+                    <li>
+                        <a href="#" title="Sneake">
+                            <img _src="img/1.jpg" src="img/image-01.jpg" alt="Sneakers & Stilettos"></a>
+                    </li>
+                    <li>
+                        <a href="#" title="Sneake">
+                            <img _src="img/6.jpg" src="img/image-01.jpg" alt="Sneakers & Stilettos"></a>
+                    </li>
+                </ul>
+                <input type="hidden" id="phot-num" value="10"></div>
+        </div>
+        <!--我的评论-->
+        <div class="row mess-main" id="argu-main" style="display: none">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="col-md-3  col-ms-3  mess-side" style="background:white;height: 500px;"></div>
+                <div class="col-md-8 col-sm-8 col-md-offset-1 col-sm-offset-1 col-xs-12 dis-one">
+                    <div class="col-md-1 col-sm-1  col-xs-2 ">
+                        <img src="img/self-face.jpg" class="faceimg">
+                    </div>
+                    <div class="col-md-10 col-sm-10  col-xs-10">
+                        <div class="dis-face">
+                            <div class="dis-content">
+                                <div class="dis-author">
+                                    <a href="#" class="dis-name" class="dis-name">河畔的雨</a>
+                                    <time class="dis-time" class="dis-time">3-30 10:40</time>
+                                </div>
+                                <div class="dis-main">
+                                    <p>很漂亮啊，跟官网的不同，目前没有上线吗</p>
+                                </div>
+                                <div class="self-foo" >
+                                    <div class="res">
+                                        <a class="self-res" title="回复"data-toggle="tooltip" data-placement="top">
+                                            <span class="glyphicon glyphicon-pencil"></span>
+                                            33
+                                        </a>
+                                        <div class="down-angle" style="color: #fff;"></div>
+                                    </div>
+                                    <div class="letter">
+                                        <a class="self-mess" title="私信"data-toggle="tooltip" data-placement="top">
+                                            <span class="glyphicon glyphicon-envelope"></span>
+                                            33
+                                        </a>
+                                        <div class="down-angle"></div>
+                                    </div>
+                                    <div class="share">
+                                        <a class="self-share" title="分享"data-toggle="tooltip" data-placement="top">
+                                            <span class="glyphicon glyphicon-share"></span>
+                                            33
+                                        </a>
+                                    </div>
+                                    <div class="supp">
+                                        <a class="self-sup" title="点赞"data-toggle="tooltip" data-placement="top">
+                                            <span class="glyphicon glyphicon-thumbs-up"></span>
+                                            <span class="sup-num">33</span>
+                                        </a>
+                                    </div>
+                                    <div style="clear: both;height: 1px"></div>
+                                    <div class="down-warp">
+                                        <div class="panel panel-default">
+                                            <div class="panel-body">
+                                                <form class="input-form concat-form">
+                                                    <h4>我来说两句</h4>
+                                                    <textarea  class="input-text" contenteditable="true"></textarea>
+                                                    <p class="content-warm">
+                                                        还可以输入
+                                                        <span class="col-num">200</span>
+                                                        字
+                                                    </p>
+                                                    <div class="mtm-post">
+                                                        <div class="uibtn"> <i class="uiface">表情</i>
+                                                        </div>
+                                                        <button class="btn btn-primary pull-right text-sub" type="submit">评论</button>
+                                                        <a  class="cle" >清尾</a>
+                                                        <div style="clear:both;height: 1px"></div>
+                                                    </div>
+                                                </form>
+                                                <div class="panel-list">
+                                                    <h4>看看他们说了什么</h4>
+                                                    <div class="other-point">
+                                                        <div class="point-one">
+                                                            <div class="point-face">
+                                                                <img src="img/self-face.jpg"></div>
+                                                            <div class="point-main">ligfqeioriyjviutyrjhui</div>
+                                                            <div style="clear: both;height: 1px"></div>
+                                                            <div class="point-foo">
+                                                                <time class="point-time">6月9日</time>
+                                                                <div class="point-other">
+                                                                    <ul  class="po-re">
+                                                                        <li>
+                                                                            <a class="po-res">回复</a>
+                                                                        </li>
+                                                                        <li class="pos-del">
+                                                                            <a class="po-del">删除</a>
+                                                                            <div class="del-sure">
+                                                                                <div class="del-sure-cont">
+                                                                                    <p class="del-sure_txt">
+                                                                                        <span class="glyphicon glyphicon-question-sign ans-coin"></span>
+                                                                                        <span class="del-warm">确定要删除该回复吗</span>
+                                                                                    </p>
+                                                                                    <div class="btn-group del-btn" role="group">
+                                                                                        <button type="button" class="btn btn-default btn-ok">确定</button>
+                                                                                        <button type="button" class="btn btn-default btn-no">取消</button>
+                                                                                        <div class="glyphicon glyphicon-triangle-bottom del-angle"></div>
+
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                        </li>
+                                                                        <li >
+                                                                            <a class="po-su">
+                                                                                <span class="glyphicon glyphicon-thumbs-up"></span>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+
+                                                                <div style="clear: both;height: 1px"></div>
+
+                                                            </div>
+                                                            <!--回复评论-->
+                                                            <form class="respon-point" style="display: none;">
+                                                                <textarea  class="input-text" contenteditable="true"></textarea>
+                                                                <div class="mtm-post">
+                                                                    <div class="uibtn">
+                                                                        <i class="uiface uiface">表情</i>
+                                                                    </div>
+                                                                    <button class="btn btn-primary pull-right text-sub" type="submit">评论</button>
+                                                                    <a  class="cle" >清尾</a>
+                                                                    <div style="clear:both;height: 1px"></div>
+                                                                </div>
+                                                            </form>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="down-letter" style="display:none;">
+                                        <div class="panel panel-default">
+                                            <div class="panel-body">
+                                                <form class="input-form concat-form">
+                                                    <h4>我来说两句</h4>
+                                                    <textarea  class="input-text" contenteditable="true"></textarea>
+                                                    <p class="content-warm">
+                                                        还可以输入
+                                                        <span class="col-num">200</span>
+                                                        字
+                                                    </p>
+
+                                                    <div class="mtm-post">
+                                                        <div class="uibtn">
+                                                            <i class="uiface uiface">表情</i>
+                                                        </div>
+                                                        <button class="btn btn-primary pull-right text-sub" type="submit">评论</button>
+                                                        <a  class="cle" >清尾</a>
+                                                        <div style="clear:both;height: 1px"></div>
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="clear:both;height: 1px"></div>
+            </div>
+        </div>
+        <!--我的树洞-->
+        <div class="row mess-main" id="hole-main"style="display: none">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="col-md-3  col-ms-3  mess-side" style="background:#fff;height: 500px;"></div>
+                <div class="col-md-9  col-ms-9  mess-content" id="hole-wall">
+                    <div class="hole-form">
+                        <p class="hole-head">我要发表</p>
+                        <form class="input-form concat-form" >
+                            <textarea class="input-text" class=""></textarea>
+                            <p class="content-warm" style="right: 55px;top: 135px;">
+                                还可以输入
+                                <span class="col-num">200</span>
+                                字
+                            </p>
+                            <div class="mtm-post">
+                                <div class="uibtn">
+                                    <i class="uiface"></i>
+                                    表情
+                                </div>
+
+                                <button class="btn btn-primary pull-right" id="text-sub" type="submit">评论</button>
+                                <a class="cle">清尾</a>
+                                <div style="clear: both;"></div>
+                            </div>
+                        </form>
+                    </div>
+                    <!--一个私信区域-->
+                    <div class="row dis-one" style=" margin-left: 0;">
+                        <div class="col-md-1 col-sm-1  col-xs-2 ">
+                            <img src="img/self-face.jpg" class="faceimg">
+                        </div>
+                        <div class="col-md-10 col-sm-10  col-xs-10">
+                            <div class="dis-face">
+                                <div class="dis-content">
+                                    <div class="dis-author">
+                                        <a href="#" class="dis-name" class="dis-name">河畔的雨</a>
+                                        <time class="dis-time" class="dis-time">3-30 10:40</time>
+                                    </div>
+                                    <div class="dis-main">
+                                        <p>很漂亮啊，跟官网的不同，目前没有上线吗</p>
+                                    </div>
+                                    <div class="self-foo" >
+                                        <div class="res">
+                                            <a class="self-res" title="回复"data-toggle="tooltip" data-placement="top">
+                                                <span class="glyphicon glyphicon-pencil"></span>
+                                                33
+                                            </a>
+                                            <div class="down-angle" style="color: #fff;"></div>
+                                        </div>
+                                        <div class="letter">
+                                            <a class="self-mess" title="私信"data-toggle="tooltip" data-placement="top">
+                                                <span class="glyphicon glyphicon-envelope"></span>
+                                                33
+                                            </a>
+                                            <div class="down-angle"></div>
+                                        </div>
+                                        <div class="share">
+                                            <a class="self-share" title="分享"data-toggle="tooltip" data-placement="top">
+                                                <span class="glyphicon glyphicon-share"></span>
+                                                33
+                                            </a>
+                                        </div>
+                                        <div class="supp">
+                                            <a class="self-sup" title="点赞"data-toggle="tooltip" data-placement="top">
+                                                <span class="glyphicon glyphicon-thumbs-up"></span>
+                                                <span class="sup-num">33</span>
+                                            </a>
+                                        </div>
+                                        <div style="clear: both;height: 1px"></div>
+                                        <div class="down-warp">
+                                            <div class="panel panel-default">
+                                                <div class="panel-body">
+                                                    <form class="input-form concat-form">
+                                                        <h4>我来说两句</h4>
+                                                        <textarea  class="input-text" contenteditable="true"></textarea>
+                                                        <p class="content-warm">
+                                                            还可以输入
+                                                            <span class="col-num">200</span>
+                                                            字
+                                                        </p>
+                                                        <div class="mtm-post">
+                                                            <div class="uibtn"> <i class="uiface">表情</i>
+                                                            </div>
+                                                            <button class="btn btn-primary pull-right text-sub" type="submit">评论</button>
+                                                            <a  class="cle" >清尾</a>
+                                                            <div style="clear:both;height: 1px"></div>
+                                                        </div>
+                                                    </form>
+                                                    <div class="panel-list">
+                                                        <h4>看看他们说了什么</h4>
+                                                        <div class="other-point">
+                                                            <div class="point-one">
+                                                                <div class="point-face">
+                                                                    <img src="img/self-face.jpg"></div>
+                                                                <div class="point-main">ligfqeioriyjviutyrjhui</div>
+                                                                <div style="clear: both;height: 1px"></div>
+                                                                <div class="point-foo">
+                                                                    <time class="point-time">6月9日</time>
+                                                                    <div class="point-other">
+                                                                        <ul  class="po-re">
+                                                                            <li>
+                                                                                <a class="po-res">回复</a>
+                                                                            </li>
+                                                                            <li class="pos-del">
+                                                                                <a class="po-del">删除</a>
+                                                                                <div class="del-sure">
+                                                                                    <div class="del-sure-cont">
+                                                                                        <p class="del-sure_txt">
+                                                                                            <span class="glyphicon glyphicon-question-sign ans-coin"></span>
+                                                                                            <span class="del-warm">确定要删除该回复吗</span>
+                                                                                        </p>
+                                                                                        <div class="btn-group del-btn" role="group">
+                                                                                            <button type="button" class="btn btn-default btn-ok">确定</button>
+                                                                                            <button type="button" class="btn btn-default btn-no">取消</button>
+                                                                                            <div class="glyphicon glyphicon-triangle-bottom del-angle"></div>
+
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                            </li>
+                                                                            <li >
+                                                                                <a class="po-su">
+                                                                                    <span class="glyphicon glyphicon-thumbs-up"></span>
+                                                                                </a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+
+                                                                    <div style="clear: both;height: 1px"></div>
+
+                                                                </div>
+                                                                <!--回复评论-->
+                                                                <form class="respon-point" style="display: none;">
+                                                                    <textarea  class="input-text" contenteditable="true"></textarea>
+                                                                    <div class="mtm-post">
+                                                                        <div class="uibtn">
+                                                                            <i class="uiface uiface">表情</i>
+                                                                        </div>
+                                                                        <button class="btn btn-primary pull-right text-sub" type="submit">评论</button>
+                                                                        <a  class="cle" >清尾</a>
+                                                                        <div style="clear:both;height: 1px"></div>
+                                                                    </div>
+                                                                </form>
+
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="down-letter" style="display:none;">
+                                            <div class="panel panel-default">
+                                                <div class="panel-body">
+                                                    <form class="input-form concat-form">
+                                                        <h4>我来说两句</h4>
+                                                        <textarea  class="input-text" contenteditable="true"></textarea>
+                                                        <p class="content-warm">
+                                                            还可以输入
+                                                            <span class="col-num">200</span>
+                                                            字
+                                                        </p>
+
+                                                        <div class="mtm-post">
+                                                            <div class="uibtn">
+                                                                <i class="uiface uiface">表情</i>
+                                                            </div>
+                                                            <button class="btn btn-primary pull-right text-sub" type="submit">评论</button>
+                                                            <a  class="cle" >清尾</a>
+                                                            <div style="clear:both;height: 1px"></div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="dis-more" style="margin-left:0;">
+                            <a class="btn">加载更多</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</div>
+<!--照片察看模态框-->
+<div class="modal fade" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" >
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">提示信息</h4>
+            </div>
+            <div class="modal-body" >
+                <div class="modal-warp" >
+                    <div class = "big-img" >
+                        <img src="img/loading.gif"></div>
+                    <div class="img-prev"> <strong class="prev-arr">&lt</strong>
+                    </div>
+                    <div class="img-next"> <strong class="next-arr">&gt</strong>
+                    </div>
+                    <div style="clear:both;height: 1px"></div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <input type="hidden" id="url"/>
+                <button type="button" class="btn btn-default btn-miss" data-dismiss="modal">取消</button>
+                <a   class="btn btn-success btn-succ" data-dismiss="modal" data-toggle="modal" data-target="#delSucc" style="margin-left: 10%">确定</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--上传照片模态框-->
+<div class="modal fade" id="faceModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" >
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">提示信息</h4>
+            </div>
+            <div class="modal-body">
+                <div class="btn-group" role="group" aria-label="...">
+                    <button type="button" class="btn btn-default btn_actived">本地相册</button>
+                    <button type="button" class="btn btn-default">我的照片</button>
+                </div>
+                <div class="uput" style="width: 100%">
+                    <div class="row">
+                        <div class="col-md-7 col-ms-7 image-upload">
+                            <div class="upload">
+                                <form>
+                                    <input type="file"></form>
+                                <p class="upload_exp">只支持JPG、PNG、GIF，大小不超过5M</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-ms-4 col-ms-offset-1 col-md-offset-1 image-skim " >
+                            <div class="preview">
+                                <p class="tit">预览</p>
+                                <div class="face_100">
+                                    <img src="img/self-face.jpg">
+                                    <p>100px x 100px</p>
+                                </div>
+                                <div class="face_50">
+                                    <img src="img/self-face.jpg">
+                                    <p>50px x 50px</p>
+                                </div>
+                                <div class="face_30">
+                                    <img src="img/self-face.jpg">
+                                    <p>30px x 30px</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <input type="hidden" id="url"/>
+                <button type="button" class="btn btn-default btn-miss" data-dismiss="modal">取消</button>
+                <a   class="btn btn-success btn-succ" data-dismiss="modal" data-toggle="modal" data-target="#delSucc" style="margin-left: 10%">确定</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--上传照片模态框-->
+<div class="modal fade" id="privModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" >
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">提示信息</h4>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <input type="hidden" id="url"/>
+                <button type="button" class="btn btn-default btn-miss" data-dismiss="modal">取消</button>
+                <a   class="btn btn-success btn-succ" data-dismiss="modal" data-toggle="modal" data-target="#delSucc" style="margin-left: 10%">确定</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--删除模态框-->
+<div class="modal fade" id="delModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">提示信息</h4>
+            </div>
+            <div class="modal-body">
+                <p>确定要删除这条私信吗？</p>
+            </div>
+            <div class="modal-footer">
+                <input type="hidden" id="url"/>
+                <button type="button" class="btn btn-default btn-miss" data-dismiss="modal">取消</button>
+                <a   class="btn btn-success btn-succ" data-dismiss="modal" data-toggle="modal" data-target="#delSucc">确定</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--删除成功模态框-->
+<div class="modal fade" id="delSucc" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                <h4 class="modal-title">提示信息</h4>
+            </div>
+            <div class="modal-body">
+                <p>恭喜你，删除成功</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<script src="js/bootstrap.min.js"></script>
+<!--jquery ui-->
+<script src="js/jquery-ui.min.js"></script>
+<!--图片察看器-->
+<script src="js/viewer-jquery.min.js"></script>
+<!-- 视频播放器 -->
+<script src="js/flowplayer.min.js"></script>
+<!--日历选择器-->
+<script src="js/jquery-ui.min.js"></script>
+<!--地址选择器-->
+<script src="js/jsAddress.js"></script>
+<!--公用-->
+<script src="js/com.js"></script>
+<!--person-->
+<script src="js/person.js"></script>
+<script>
+    $(function() {
+        $('.jq22').viewer({
+            url: 'data-original',
+        });
+    });
+</script>
+
+</body>
+</html>
